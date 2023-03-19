@@ -14,9 +14,10 @@ pipeline {
             steps {
                 script {
                    sh 'docker build -t nodejs-portfolio . ' 
+                }
             }
-        }
 
+        }
     }
 }
 // python3 app.py
