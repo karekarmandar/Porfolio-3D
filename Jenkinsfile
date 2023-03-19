@@ -23,7 +23,7 @@ pipeline {
         stage('Running the Container') {
             steps {
                 script {
-                   sh 'dokcer run --name portfolio-con -p 80:8080 nodejs-portfolio' 
+                   sh 'docker run --name portfolio-con -p 80:8080 nodejs-portfolio' 
                 }
             }
 
