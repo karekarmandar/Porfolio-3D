@@ -10,10 +10,20 @@ pipeline {
                 }
             }
         }
+        // building docker image 
         stage('Build image') {
             steps {
                 script {
                    sh 'docker build -t nodejs-portfolio . ' 
+                }
+            }
+
+        }
+        // running docker containers 
+        stage('Running the Container') {
+            steps {
+                script {
+                   sh 'dokcer run --name portfolio-con -p 80:8080 nodejs-portfolio' 
                 }
             }
 
